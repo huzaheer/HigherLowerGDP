@@ -5,6 +5,7 @@ process.env
 
 //init app
 const app = express()
+app.use(express.json())
 
 //some more middleware, this will run everytime any domain is accessed, you need next so that it continues on to further relevant middleware
 app.use((req, res, next) => {
