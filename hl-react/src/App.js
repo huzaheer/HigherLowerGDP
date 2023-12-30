@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import * as THREE from 'three';
-import SpinningEarth from './SpinningEarth';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Game from './pages/Game'
 
 function App() {
   return (
-    <><body>
-      <SpinningEarth />
-    </body></>
+    <div className="App">
+      <BrowserRouter>
+        <div className="pages">
+            <Routes>
+              <Route 
+              path = "/"
+              element={<Game />}
+              />
+            </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
