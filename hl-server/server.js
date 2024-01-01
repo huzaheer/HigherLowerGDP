@@ -9,7 +9,7 @@ const app = express()
 //connect to db
 mongoose.connect(process.env.MONG_URI)
     .then(() => {
-        //listen to port 3000 for requests, once you get the request output the following
+        //listen to port 4000 for requests, once you get the request output the following
         app.listen(process.env.PORT, () =>  {
             console.log("connected to db & listening to port 4000")
         })

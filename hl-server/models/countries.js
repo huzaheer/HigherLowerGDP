@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 //defining scheme for data to be added
 const countriesSchema = new Schema({
     Num_ID: {
-        type: String,
+        type: Number,
         required: true
     },
     Country_Area: {

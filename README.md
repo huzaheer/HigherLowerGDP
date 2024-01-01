@@ -14,3 +14,4 @@ MongoDB:
 mongoose package allows you to do cool shit with mongodb such as create schemas
 you have to add specific database into connection string to connect with that database
 if document you create is incompatible with the collection then mongo will create new collection and add it there
+if you update something, the object you get back does not reflect the most recent update

@@ -68,11 +68,37 @@ const update_country = async (req, res) => {
     res.status(200).json(country)
 }
 
+//Get GDP of country
+
+
+// Get GDP of country
+const get_GDP = async (req, res) => {
+    const { id } = req.params;
+    const numId = Math.trunc(parseInt(id, 10)); // Make sure this is an integer
+
+    if (isNaN(numId) || numId < 1 || numId >= 230) {
+        return res.status(404).json({ error: "Invalid Num_ID, needs to be between 1 and 229" });
+    }
+    console.log((typeof numId))
+    try {
+        const GDP_Country = await GDP.find({ Num_ID: 100 }); // numId must be an integer here
+
+        if (!GDP_Country || GDP_Country.length === 0) {
+            return res.status(404).json({ error: 'No GDP data found for the provided Num_ID' });
+        }
+
+        res.status(200).json(GDP_Country);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
 
 module.exports = {
     create_Country,
     get_all_countries,
     get_single_country,
     delete_country,
-    update_country
+    update_country,
+    get_GDP
 }

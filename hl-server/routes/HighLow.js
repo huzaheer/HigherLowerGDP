@@ -6,13 +6,16 @@ const {
     get_single_country,
     get_all_countries,
     delete_country,
-    update_country
+    update_country,
+    get_GDP
 } = require('../controllers/GDPcontroller')
 
 //setting up a route, everytime / is accessed, we fire the response json object
 router.get("/", get_all_countries) 
 
 router.get('/:id', get_single_country)
+
+router.get('/GDP/:id', get_GDP)
 
 router.post('/', create_Country)
 
