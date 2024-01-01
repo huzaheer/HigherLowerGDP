@@ -9,6 +9,8 @@ const ACTUAL_GAME = () => {
     // State for current score and high score
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    // State to track whether the game is showing the "Game Over" screen
+    const [showGameOver, setShowGameOver] = useState(false);
 
     function getRandomNumber() {
         return Math.floor(Math.random() * 242) + 1;
@@ -62,10 +64,15 @@ const ACTUAL_GAME = () => {
             setScore(prevScore => prevScore + 1);
             gameloop();
         } else {
-            // Update high score if necessary and reset current score
-            setScore(0);
-            // Optionally, fetch new countries or show a game over message
-            fetchRandomCountries(); // Or show game over
+            // Show game over screen
+            setShowGameOver(true);
+
+            // After a delay, reset the game
+            setTimeout(() => {
+                setShowGameOver(false); // Hide the game over screen
+                setScore(0); // Reset score
+                fetchRandomCountries(); // Fetch new countries
+            }, 3000); // Delay in milliseconds (3 seconds)
         }
     };
 
@@ -73,14 +80,23 @@ const ACTUAL_GAME = () => {
     return (
         <div className="game">
             <h2>Compare GDPs</h2>
-            {countryOne && countryTwo && (
+            {showGameOver ? (
+                // Display the Game Over screen
                 <div>
-                    <p>{countryOne.Country_Area}: {countryOne.Formatted}</p>
-                    <p>VS</p>
-                    <p>{countryTwo.Country_Area}</p>
-                    <button onClick={() => handleGuess('higher')}>Higher</button>
-                    <button onClick={() => handleGuess('lower')}>Lower</button>
+                    <h2>Game Over!</h2>
+                    <p>Your final score was: {score}</p>
                 </div>
+            ) : (
+                // Display the game if not showing the Game Over screen
+                countryOne && countryTwo && (
+                    <div>
+                        <p>{countryOne.Country_Area}: {countryOne.Formatted}</p>
+                        <p>VS</p>
+                        <p>{countryTwo.Country_Area}</p>
+                        <button onClick={() => handleGuess('higher')}>Higher</button>
+                        <button onClick={() => handleGuess('lower')}>Lower</button>
+                    </div>
+                )
             )}
             <p>Current Score: {score}</p>
             <p>High Score: {highScore}</p>
