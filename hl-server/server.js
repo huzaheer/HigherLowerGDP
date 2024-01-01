@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const gameroutes = require('./routes/HighLow')
 const mongoose = require('mongoose')
+const cors = require('cors');
 
 // creating express app
 const app = express()
@@ -27,8 +28,15 @@ app.use((req, res, next) => {
     next()
 })
 
+// Use CORS
+app.use(cors());
+
+app.use(cors({
+    origin: 'http://localhost:3000' // allow to server to accept request from different origin
+  }));
+
 
 
 
 //we export all routes to another file and just make our server use those routes
-app.use('/game', gameroutes)
+app.use('/api', gameroutes)
