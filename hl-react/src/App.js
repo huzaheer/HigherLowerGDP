@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Game from './pages/Game'
 import ACTUAL_GAME from './pages/ActualGame'
 
 
@@ -11,10 +10,6 @@ function App() {
             <Routes>
               <Route 
               path = "/"
-              element={<Game />}
-              />
-              <Route 
-              path = "/game"
               element={<ACTUAL_GAME />}
               />
             </Routes>
