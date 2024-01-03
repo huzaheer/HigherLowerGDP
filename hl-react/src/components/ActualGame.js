@@ -1,6 +1,7 @@
 // src/components/Game.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './ActualGame.css'
 
 const ACTUAL_GAME = () => {
     // State for storing two countries to compare

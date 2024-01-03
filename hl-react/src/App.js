@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
-import ACTUAL_GAME from './pages/ActualGame'
+import ACTUAL_GAME from './components/ActualGame'
 import Earth from './components/Earth'
+import Frame from './components/test'
+import GDPComparison from './components/test_final'
 
 
 function App() {
@@ -17,6 +19,14 @@ function App() {
               <Route 
               path = "/earth"
               element={<Earth />}
+              />
+              <Route
+              path = "/home"
+              element={<Frame />}
+              />
+              <Route
+              path = "/homer"
+              element={<GDPComparison />}
               />
             </Routes>
         </div>

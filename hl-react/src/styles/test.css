@@ -1,0 +1,116 @@
+.frame {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .frame .overlap-group-wrapper {
+    background-color: #ffffff;
+    height: 700px;
+    width: 1440px;
+  }
+  
+  .frame .overlap-group {
+    background-color: black;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+  }
+  
+  .frame .country-b {
+    color: #ffffff;
+    font-family: "Kumbh Sans-Bold", Helvetica;
+    font-size: 40.4px;
+    font-weight: 700;
+    left: 131px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 281px;
+    width: 319px;
+  }
+  
+  .frame .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Kumbh Sans-Bold", Helvetica;
+    font-size: 40.4px;
+    font-weight: 700;
+    left: 1019px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 204px;
+    white-space: nowrap;
+    width: 224px;
+  }
+  
+  .frame .overlap {
+    height: 67px;
+    left: 479px;
+    position: absolute;
+    top: 34px;
+    width: 481px;
+  }
+  
+  .frame .text-wrapper-3 {
+    color: #ff7f50;
+    font-family: "Kumbh Sans-Bold", Helvetica;
+    font-size: 49.7px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 481px;
+  }
+  
+  .frame .logo-arrow {
+    height: 41px;
+    left: 433px;
+    position: absolute;
+    top: 26px;
+    width: 27px;
+  }
+  
+  .frame .logo-arrow-2 {
+    height: 41px;
+    left: 449px;
+    position: absolute;
+    top: 4px;
+    width: 27px;
+  }
+  
+  .frame .higher-button-instance {
+    left: 1031px !important;
+    position: absolute !important;
+    top: 300px !important;
+  }
+  
+  .frame .design-component-instance-node {
+    top: 29px !important;
+  }
+  
+  .frame .lower-button-instance {
+    left: 1031px !important;
+    position: absolute !important;
+    top: 421px !important;
+  }
+  
+  .frame .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Kumbh Sans-Bold", Helvetica;
+    font-size: 28px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 664px;
+    width: 109px;
+  }
+  
