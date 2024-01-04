@@ -10,7 +10,7 @@ root.render(
     <div id="canvas-container">
       <Earth />
     </div>
-    <div id="gdp-content">
+    <div id='gdp-content'>
       <App />
     </div>
   </>

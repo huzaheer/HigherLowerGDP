@@ -1,4 +1,4 @@
-.lower-button {
+.higher-button {
     border: 4px solid;
     border-color: #ff7f50;
     border-radius: 60px;
@@ -8,44 +8,46 @@
     width: 200px;
   }
   
-  .lower-button .text-wrapper {
+  .higher-button .text-wrapper {
     color: #ff7f50;
     font-size: 32px;
     letter-spacing: 1.28px;
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 23px;
+    top: 32px;
+    right: 60px;
   }
   
-  .lower-button .arrow {
-    height: 34px;
-    left: 137px;
+  .higher-button .arrow {
+    height: 45px;
     position: absolute;
-    width: 22px;
+    width: 32px;
   }
   
-  .lower-button.hover {
+  .higher-button.hover {
     background-color: #dddbcb;
   }
   
-  .lower-button.hover .text-wrapper {
+  .higher-button.hover .text-wrapper {
     font-family: "Kumbh Sans-SemiBold", Helvetica;
     font-weight: 600;
-    left: 32px;
+    left: 27px;
   }
   
-  .lower-button.inactive .text-wrapper {
+  .higher-button.inactive .text-wrapper {
     font-family: "Kumbh Sans-Regular", Helvetica;
-    font-weight: 400;
-    left: 35px;
+    font-weight: 500;
+    left: 30px;
   }
   
-  .lower-button.hover .arrow {
-    top: 35px;
+  .higher-button.hover .arrow {
+    left: 142px;
+    top: 22px;
   }
   
-  .lower-button.inactive .arrow {
-    top: 32px;
+  .higher-button.inactive .arrow {
+    left: 142px;
+    top: 25px;
   }
   

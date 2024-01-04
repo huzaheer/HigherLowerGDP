@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ActualGame.css'
+import { HigherButton } from "./HigherButton";
+import { LowerButton } from "./LowerButton";
+import Earth from './Earth'
 
 const ACTUAL_GAME = () => {
     // State for storing two countries to compare
@@ -73,34 +76,66 @@ const ACTUAL_GAME = () => {
                 setShowGameOver(false); // Hide the game over screen
                 setScore(0); // Reset score
                 fetchRandomCountries(); // Fetch new countries
-            }, 3000); // Delay in milliseconds (3 seconds)
+            }, 5000); // Delay in milliseconds (3 seconds)
         }
     };
 
     // Render the game UI
     return (
         <div className="game">
-            <h2>Compare GDPs</h2>
+            <div className='game-ui'>
             {showGameOver ? (
                 // Display the Game Over screen
                 <div>
                     <h2>Game Over!</h2>
                     <p>Your final score was: {score}</p>
+                    <p>High Score: {highScore}</p>
                 </div>
             ) : (
                 // Display the game if not showing the Game Over screen
                 countryOne && countryTwo && (
-                    <div>
-                        <p>{countryOne.Country_Area}: {countryOne.Formatted}</p>
-                        <p>VS</p>
-                        <p>{countryTwo.Country_Area}</p>
-                        <button onClick={() => handleGuess('higher')}>Higher</button>
-                        <button onClick={() => handleGuess('lower')}>Lower</button>
-                    </div>
+                    <>
+                    <div className="frame">
+                            <div className="div-2">
+                                <div className="country-b">
+                                {countryOne.Country_Area}<br />
+                                    <br />
+                                    {countryOne.Formatted}
+                                </div>
+                                <div className="text-wrapper-2">{countryTwo.Country_Area}</div>
+                                <div className="text-wrapper-4">Score: {score}</div>
+                                <div className="overlap-group">
+                                    <div className="text-wrapper-3">Higher Lower GDP</div>
+                                    <img className="logo-arrow" alt="Logo arrow" src="./Arrow_down.svg" />
+                                    <img className="logo-arrow-2" alt="Logo arrow" src="./Arrow_up.svg" />
+                                </div>
+                                <HigherButton
+                                    onClick={() => handleGuess('higher')}
+                                    arrow="arrow-1-4.svg"
+                                    arrowClassName="design-component-instance-node"
+                                    className="higher-button-instance"
+                                    states="inactive" />
+                                <LowerButton 
+                                    onClick={() => handleGuess('lower')}
+                                    arrow="arrow-1-5.svg"
+                                    className="lower-button-instance" 
+                                    states="inactive" />
+                            </div>
+                        </div>
+                        {/* <div>
+                            <h2>Compare GDPs</h2>
+                            <p>{countryOne.Country_Area}: {countryOne.Formatted}</p>
+                            <p>VS</p>
+                            <p>{countryTwo.Country_Area}</p>
+                            <HigherButton onClick={() => handleGuess('higher')} />
+                            <LowerButton onClick={() => handleGuess('lower')} />
+                        </div> */}
+                    </>
                 )
             )}
-            <p>Current Score: {score}</p>
-            <p>High Score: {highScore}</p>
+            {/* <p>Current Score: {score}</p>
+            <p>High Score: {highScore}</p> */}
+            </div>
         </div>
     );
 };

@@ -14,12 +14,12 @@ code {
 
 #canvas-container {
   position: absolute; /* Overlay the canvas */
-  z-index: 1; /* lower z-index so it's below the GDP content */
+  z-index: 10; /* lower z-index so it's below the GDP content */
+  pointer-events: auto;
 }
 
 #gdp-content {
   position: absolute;
-  z-index: 10; /* higher z-index to be on top */
-  top: 0; /* adjust as necessary */
+  top: 0;
   width: 100%;
 }

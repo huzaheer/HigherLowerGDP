@@ -1,4 +1,4 @@
-.higher-button {
+.lower-button {
     border: 4px solid;
     border-color: #ff7f50;
     border-radius: 60px;
@@ -8,49 +8,45 @@
     width: 200px;
   }
   
-  .higher-button .text-wrapper {
+  .lower-button .text-wrapper {
     color: #ff7f50;
     font-size: 32px;
     letter-spacing: 1.28px;
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 23px;
+    top: 32px;
+    right: 70px;
   }
   
-  .higher-button .arrow {
-    height: 34px;
+  .lower-button .arrow {
+    height: 38px;
+    left: 137px;
     position: absolute;
-    width: 22px;
+    width: 32px;
   }
   
-  .higher-button.hover {
+  .lower-button.hover {
     background-color: #dddbcb;
   }
   
-  .higher-button.hover .text-wrapper {
+  .lower-button.hover .text-wrapper {
     font-family: "Kumbh Sans-SemiBold", Helvetica;
     font-weight: 600;
-    left: 27px;
+    left: 32px;
   }
   
-  .higher-button.inactive .text-wrapper {
+  .lower-button.inactive .text-wrapper {
     font-family: "Kumbh Sans-Regular", Helvetica;
     font-weight: 400;
-    left: 30px;
+    left: 35px;
   }
   
-  .higher-button.hover .arrow {
-    left: 142px;
-    top: 22px;
+  .lower-button.hover .arrow {
+    top: 35px;
   }
   
-  .higher-button.inactive .arrow {
-    left: 143px;
-    top: 28px;
-  }
-
-  .arrow {
-    color: #ff7f50;
+  .lower-button.inactive .arrow {
+    top: 32px;
   }
   

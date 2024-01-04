@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { useReducer } from "react";
-import "../styles/LowButton_style.css";
+import "../styles/Lower.css";
 
-export const LowerButton = ({ states, className }) => {
+export const LowerButton = ({ states, className, onClick }) => {
   const [state, dispatch] = useReducer(reducer, {
     states: states || "inactive",
   });
@@ -17,9 +17,10 @@ export const LowerButton = ({ states, className }) => {
       onMouseEnter={() => {
         dispatch("mouse_enter");
       }}
+      onClick={onClick}  // Add the onClick event here
     >
       <div className="text-wrapper">Lower</div>
-      <img className="arrow" alt="Arrow" src={state.states === "hover" ? "image.svg" : "arrow-1.svg"} />
+      <img className="arrow" alt="Arrow" src={state.states === "hover" ? "./Arrow_down.svg" : "./Arrow_down.svg"} />
     </div>
   );
 };
@@ -44,4 +45,5 @@ function reducer(state, action) {
 
 LowerButton.propTypes = {
   states: PropTypes.oneOf(["inactive", "hover"]),
+  onClick: PropTypes.func,  // Add this line
 };

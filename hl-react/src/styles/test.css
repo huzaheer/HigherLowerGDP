@@ -1,27 +1,18 @@
 .frame {
-    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
   }
   
-  .frame .overlap-group-wrapper {
-    background-color: #ffffff;
+  .frame .div-2 {
     height: 700px;
+    position: relative;
     width: 1440px;
   }
   
-  .frame .overlap-group {
-    background-color: black;
-    background-position: 50% 50%;
-    background-size: cover;
-    height: 700px;
-    position: relative;
-  }
-  
   .frame .country-b {
-    color: #ffffff;
+    color: #d9d9d9;
     font-family: "Kumbh Sans-Bold", Helvetica;
     font-size: 40.4px;
     font-weight: 700;
@@ -32,10 +23,11 @@
     text-align: center;
     top: 281px;
     width: 319px;
+    pointer-events: none;
   }
   
   .frame .text-wrapper-2 {
-    color: #ffffff;
+    color: #d9d9d9;
     font-family: "Kumbh Sans-Bold", Helvetica;
     font-size: 40.4px;
     font-weight: 700;
@@ -46,14 +38,16 @@
     top: 204px;
     white-space: nowrap;
     width: 224px;
+    pointer-events: none;
   }
   
-  .frame .overlap {
+  .frame .overlap-group {
     height: 67px;
     left: 479px;
     position: absolute;
     top: 34px;
     width: 481px;
+    pointer-events: none;
   }
   
   .frame .text-wrapper-3 {
@@ -67,22 +61,25 @@
     position: absolute;
     top: 0;
     width: 481px;
+    pointer-events: none;
   }
   
   .frame .logo-arrow {
     height: 41px;
-    left: 433px;
+    left: 446px;
     position: absolute;
-    top: 26px;
-    width: 27px;
+    top: 18px;
+    width: 45px;
+    pointer-events: none;
   }
   
   .frame .logo-arrow-2 {
     height: 41px;
-    left: 449px;
+    left: 436px;
     position: absolute;
-    top: 4px;
-    width: 27px;
+    top: -2px;
+    width: 45px;
+    pointer-events: none;
   }
   
   .frame .higher-button-instance {
@@ -112,5 +109,6 @@
     position: absolute;
     top: 664px;
     width: 109px;
+    pointer-events: none;
   }
   
