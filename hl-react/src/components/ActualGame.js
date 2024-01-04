@@ -76,7 +76,7 @@ const ACTUAL_GAME = () => {
                 setShowGameOver(false); // Hide the game over screen
                 setScore(0); // Reset score
                 fetchRandomCountries(); // Fetch new countries
-            }, 5000); // Delay in milliseconds (3 seconds)
+            }, 7000); // Delay in milliseconds (3 seconds)
         }
     };
 
