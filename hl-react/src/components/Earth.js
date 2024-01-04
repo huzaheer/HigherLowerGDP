@@ -11,7 +11,7 @@ const earthRef = useRef(null);
 useEffect(() => {
     if (!earthRef.current) return;
     const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'));
-    const EarthUrl = new URL('./scene.gltf', baseUrl);
+    const EarthUrl = new URL('./scene_2.gltf', baseUrl);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
@@ -58,7 +58,7 @@ useEffect(() => {
     const orbit = new OrbitControls(camera, renderer.domElement);
 
     camera.position.set(-2, 2, -3);
-    camera.lookAt(new THREE.Vector3(0, 0, 0)); // Adjust target as needed
+    camera.lookAt(new THREE.Vector3(5, 0, 0)); // Adjust target as needed
     orbit.update();
 
     // const grid = new THREE.GridHelper(30, 30);

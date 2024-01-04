@@ -7,7 +7,7 @@ import Earth from './components/Earth'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <div id="canvas-container">
+    <div>
       <Earth />
     </div>
     <div id='gdp-content'>
