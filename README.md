@@ -1,7 +1,9 @@
 # Higher or Lower GDP Game
 
 ## Inspiration
-This game was born out of a college pastime that my friends and I engaged in to broaden our geopolitical knowledge in a fun and interactive way. We would challenge each other to guess which countries had higher or lower GDPs, sparking discussions and a deeper understanding of global economics and geography.
+This game was born out of a college pastime that my friends and I engaged in to broaden our geopolitical knowledge in a fun and interactive way. We would challenge each other to guess which countries had higher or lower GDPs, sparking discussions and a deeper understanding of global economics and geography. Below is a qucik demonstration of the game.
+https://youtu.be/2dF8iib_BhM
+
 
 ## Project Overview
 The Higher or Lower GDP Game is a dynamic, educational web application that combines data visualization and gaming to create an engaging way to learn about the world's economies. The core gameplay revolves around comparing the GDPs of two countries and guessing which one is higher or lower.
