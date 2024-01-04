@@ -15,7 +15,15 @@ useEffect(() => {
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    // renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const width = window.innerWidth; // Half the window width
+    const height = window.innerHeight;
+    renderer.setSize(width, height);
+
+    // renderer.domElement.style.position = 'absolute';
+    // renderer.domElement.style.right = '0px'; // Align to the right
+
 
     document.body.appendChild(renderer.domElement);
 
@@ -23,7 +31,7 @@ useEffect(() => {
 
     const camera = new THREE.PerspectiveCamera(
         45,
-        window.innerWidth / window.innerHeight,
+        (window.innerWidth) / window.innerHeight,
         0.1,
         1000
     );
@@ -50,6 +58,7 @@ useEffect(() => {
     const orbit = new OrbitControls(camera, renderer.domElement);
 
     camera.position.set(-2, 2, -3);
+    camera.lookAt(new THREE.Vector3(0, 0, 0)); // Adjust target as needed
     orbit.update();
 
     // const grid = new THREE.GridHelper(30, 30);
