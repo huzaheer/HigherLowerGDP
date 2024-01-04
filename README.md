@@ -1,17 +1,46 @@
-# HigherLowerGDP
+# Higher or Lower GDP Game
 
-Nodemon --> We're using nodemon so that it allows us to see changes we made just by saving instead of saving and then having to rerun the file
+## Inspiration
+This game was born out of a college pastime that my friends and I engaged in to broaden our geopolitical knowledge in a fun and interactive way. We would challenge each other to guess which countries had higher or lower GDPs, sparking discussions and a deeper understanding of global economics and geography. Below is a quick demonstration of the game.
 
-.env --> Since this is probably something we're going to make public, we want to store certain sensitive constants in an environment variable. This makes it so these variables remain hidden even when we push to git by adding it to our git ignore. 
 
-middleware --> Middleware is code that executes between us getting a request from a server and us sending a respone
+## Project Overview
+The Higher or Lower GDP Game is a dynamic, educational web application that combines data visualization and gaming to create an engaging way to learn about the world's economies. The core gameplay revolves around comparing the GDPs of two countries and guessing which one is higher or lower.
 
-POSTMAN --> We use postman to circumvent the need to create a frontend to try out different types of requests. Lets us simulate different types of requests
+## Data Scraping and Database
+The GDP data was gathered using the BeautifulSoup library in Python, scraping reliable sources to ensure the information's accuracy and relevance. After cleansing and formatting in Excel, the data was imported into a MongoDB database hosted on Atlas.
 
-npm install -g nodemon --> installs nodemon, note that the -g means to install globally so u can use it anywhere
+## Server and API
+A Node.js server was established to manage the data, with multiple API endpoints designed to handle GET, POST, DELETE, and UPDATE requests. This backend system serves as the data backbone for the game, allowing for real-time interactions and updates.
 
-MongoDB:
-mongoose package allows you to do cool shit with mongodb such as create schemas
-you have to add specific database into connection string to connect with that database
-if document you create is incompatible with the collection then mongo will create new collection and add it there
-if you update something, the object you get back does not reflect the most recent update
+## Frontend Development
+The frontend was developed using React, leveraging hooks like `useEffect` and `useState` to create a dynamic and responsive user interface. The frontend smoothly updates to reflect real-time gameplay and data changes.
+
+## 3D Modeling and Rendering
+An interactive, low-poly Earth model, complete with animations, was crafted in Blender. This model was then brought to life in the web application using the Three.js library, providing an immersive visual context for the GDP data.
+
+## Design and Animation
+Figma was utilized for additional animations, stylistic, and color choices, bringing a cohesive and attractive design language to the game. These design elements enhance the user experience and make the gameplay both enjoyable and educational.
+
+## Getting Started
+To run this project locally, clone the repository and follow the instructions below:
+
+1. Open two Terminals:
+2. Terminal 1:
+  ```bash
+  cd hl-server    //cd into server
+  npm install     //install dependencies
+  npm run dev
+  ```
+
+3. Terminal 2:
+  ```bash
+  cd hl-react     //cd into react
+  npm install     // install dependences
+  npm start
+  ```
+
+3. Navigate to `localhost:3000` in your browser to play the game.
+
+## Contributions
+Contributions are welcome! If you have suggestions or want to contribute to the codebase, please feel free to create an issue or a pull request.
