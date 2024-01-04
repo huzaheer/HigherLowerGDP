@@ -1,7 +1,7 @@
 # Higher or Lower GDP Game
 
 ## Inspiration
-This game was born out of a college pastime that my friends and I engaged in to broaden our geopolitical knowledge in a fun and interactive way. We would challenge each other to guess which countries had higher or lower GDPs, sparking discussions and a deeper understanding of global economics and geography. Below is a quick demonstration of the game.
+This game was born out of a college pastime that my friends and I engaged in to broaden our geopolitical knowledge in a fun and interactive way. We would challenge each other to guess which countries had higher or lower GDPs, sparking discussions and a deeper understanding of global economics and geography. Below is a quick demonstration of the game. https://www.youtube.com/watch?v=2dF8iib_BhM
 [![Higher or Lower GDP Game](https://raw.githubusercontent.com/huzaheer/HigherLowerGDP/main/hl-react/public/Screenshot%202024-01-04%20at%206.37.40%20PM.png)](https://www.youtube.com/watch?v=2dF8iib_BhM "HigherLower Game")
 
 
